@@ -6,12 +6,12 @@ This bug was trtacked and fix in the AOSP. The initial bug report can be found h
 
 ## Background
 
-The main piece of code to reproduce the failure launching the `ACTION_PROCESS_WIFI_EASY_CONNECT_URI` with any URI as shown below. 
+The main piece of code to reproduce the failure launching the `android.settings.PROCESS_WIFI_EASY_CONNECT_URI` with any URI as shown below. 
 
 The result of the launched intent is returned immediatly as Cancelled. 
 
 ``` Kotlin
-val intent = Intent(Settings.ACTION_PROCESS_WIFI_EASY_CONNECT_URI)
+val intent = Intent(android.settings.PROCESS_WIFI_EASY_CONNECT_URI)
 intent.data = Uri.parse(uri)
 startActivityForResult(intent, 1111)
 ```
